@@ -6,6 +6,7 @@
   "dependencyDashboard": true,
   "platformAutomerge": false,
   "rebaseWhen": "conflicted",
+  "internalChecksFilter": "strict",
   "packageRules": [
     {
       "matchUpdateTypes": [
