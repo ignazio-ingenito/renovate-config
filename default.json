@@ -10,6 +10,16 @@
   "prCreation": "not-pending",
   "packageRules": [
     {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/ignazio-ingenito/developer-workspace",
+        "harbor.lab.skunklabs.uk/private-ghcr/developer-workspace"
+      ],
+      "versioning": "regex:^(?<major>\\d{4})\\.(?<minor>\\d{2})\\.(?<patch>\\d{2})_(?<build>\\d+)$"
+    },
+    {
       "matchUpdateTypes": [
         "patch"
       ],
