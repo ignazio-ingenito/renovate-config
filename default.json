@@ -7,7 +7,7 @@
   "platformAutomerge": false,
   "rebaseWhen": "conflicted",
   "internalChecksFilter": "strict",
-  "prCreation": "not-pending",
+  "prCreation": "immediate",
   "packageRules": [
     {
       "matchDatasources": [
@@ -15,7 +15,7 @@
       ],
       "matchPackageNames": [
         "ghcr.io/ignazio-ingenito/developer-workspace",
-        "harbor.lab.skunklabs.uk/private-ghcr/developer-workspace"
+        "harbor.lab.skunklabs.uk/private-ghcr-proxy/ignazio-ingenito/developer-workspace"
       ],
       "versioning": "regex:^(?<major>\\d{4})\\.(?<minor>\\d{2})\\.(?<patch>\\d{2})_(?<build>\\d+)$"
     },
