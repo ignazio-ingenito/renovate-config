@@ -20,4 +20,4 @@ jobs:
         run: |
           node -e "JSON.parse(require('fs').readFileSync('default.json','utf8')); JSON.parse(require('fs').readFileSync('automerge.json','utf8'))"
       - name: Validate Renovate config
-        run: npx --yes renovate-config-validator default.json automerge.json
+        run: npx --yes --package renovate -- renovate-config-validator default.json automerge.json
