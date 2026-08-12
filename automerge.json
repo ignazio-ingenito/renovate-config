@@ -18,6 +18,15 @@
         "major"
       ],
       "automerge": false
+    },
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchJsonata": [
+        "$not($exists(newVersionAgeInDays))"
+      ],
+      "automerge": false
     }
   ]
 }
