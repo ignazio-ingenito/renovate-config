@@ -7,7 +7,7 @@
   "platformAutomerge": false,
   "rebaseWhen": "conflicted",
   "internalChecksFilter": "strict",
-  "prCreation": "not-pending",
+  "prCreation": "immediate",
   "packageRules": [
     {
       "matchUpdateTypes": [
