@@ -23,10 +23,25 @@
       "matchDatasources": [
         "docker"
       ],
-      "matchJsonata": [
-        "$not($exists(newVersionAgeInDays))"
+      "matchUpdateTypes": [
+        "patch",
+        "digest"
       ],
       "automerge": false
+    },
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "digest"
+      ],
+      "matchJsonata": [
+        "$exists(newVersionAgeInDays)"
+      ],
+      "automerge": true,
+      "automergeType": "pr"
     }
   ]
 }
