@@ -38,7 +38,7 @@
         "digest"
       ],
       "matchJsonata": [
-        "$exists(newVersionAgeInDays)"
+        "$exists(releaseTimestamp)"
       ],
       "automerge": true,
       "automergeType": "pr"
