@@ -17,4 +17,4 @@ jobs:
         with:
           node-version: 22
       - name: Validate Renovate config
-        run: npx --yes --package renovate@44.30.3 -- renovate-config-validator default.json automerge.json
+        run: npx --yes --package renovate@44.30.3 -- renovate-config-validator --no-global default.json automerge.json
