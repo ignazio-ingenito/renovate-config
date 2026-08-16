@@ -9,6 +9,12 @@ Shared Renovate presets for repositories owned by `ignazio-ingenito`.
 
 `prCreation` is intentionally `immediate`: the shared preset must also work in repositories that only run CI for pull requests or protected branches and do not execute checks on `renovate/**` branches. Minimum release age remains the freshness gate when the datasource provides a supported release timestamp.
 
+## Repository self-management
+
+This repository intentionally does **not** use Renovate to manage its own dependencies. The absence of a top-level `renovate.json` is therefore expected, and Mend Renovate reporting that Renovate is disabled because no configuration file exists is not an actionable repository problem by itself.
+
+GitHub Action references used by this repository are owned by Dependabot through `.github/dependabot.yml`. Introducing Renovate self-management requires a new explicit requirement or approved decision; the Mend notification alone is not sufficient justification.
+
 ## Ownership when Dependabot and Renovate coexist
 
 Repository-specific manager ownership is declared in the consuming repository only when two updaters would otherwise overlap.
