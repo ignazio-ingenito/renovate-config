@@ -9,6 +9,12 @@ Shared Renovate presets for repositories owned by `ignazio-ingenito`.
 
 `prCreation` is intentionally `immediate`: the shared preset must also work in repositories that only run CI for pull requests or protected branches and do not execute checks on `renovate/**` branches. Minimum release age remains the freshness gate when the datasource provides a supported release timestamp.
 
+## OCI CalVer
+
+The proprietary OCI producers consumed by Homelab use immutable calendar versions in the form `YYYY.MM.DD_<run_number>`. `default.json` is the authoritative package list for this versioning rule and applies the same regex ordering to both direct GHCR names and the canonical Harbor `private-ghcr` consumer names.
+
+The shared rule exists so Renovate evaluates the producer tags with the same version contract used by the publishing workflows and GitOps manifests. Mutable aliases such as `latest`, branch tags or other release tags are not the operational GitOps version source when an immutable CalVer is available.
+
 ## Repository self-management
 
 This repository intentionally does **not** use Renovate to manage its own dependencies. The absence of a top-level `renovate.json` is therefore expected, and Mend Renovate reporting that Renovate is disabled because no configuration file exists is not an actionable repository problem by itself.
