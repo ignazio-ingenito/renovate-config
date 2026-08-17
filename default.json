@@ -13,6 +13,30 @@
       "matchDatasources": [
         "docker"
       ],
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
+    },
+    {
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "minimumReleaseAge": "7 days"
+    },
+    {
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "minimumReleaseAge": "14 days"
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "30 days"
+    },
+    {
+      "matchDatasources": [
+        "docker"
+      ],
       "matchPackageNames": [
         "ghcr.io/ignazio-ingenito/developer-workspace",
         "harbor.lab.skunklabs.uk/private-ghcr/ignazio-ingenito/developer-workspace",
@@ -33,31 +57,8 @@
         "ghcr.io/ignazio-ingenito/club-aviazione-popolare-cms",
         "harbor.lab.skunklabs.uk/private-ghcr/ignazio-ingenito/club-aviazione-popolare-cms"
       ],
-      "versioning": "regex:^(?<major>\\d{4})\\.(?<minor>\\d{2})\\.(?<patch>\\d{2})_(?<build>\\d+)$"
-    },
-    {
-      "matchDatasources": [
-        "docker"
-      ],
-      "minimumReleaseAgeBehaviour": "timestamp-optional"
-    },
-    {
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "minimumReleaseAge": "7 days"
-    },
-    {
-      "matchUpdateTypes": [
-        "minor"
-      ],
-      "minimumReleaseAge": "14 days"
-    },
-    {
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "minimumReleaseAge": "30 days"
+      "versioning": "regex:^(?<major>\\d{4})\\.(?<minor>\\d{2})\\.(?<patch>\\d{2})_(?<build>\\d+)$",
+      "minimumReleaseAge": null
     }
   ]
 }
