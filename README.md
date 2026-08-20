@@ -1,6 +1,6 @@
 # renovate-config
 
-Shared Renovate presets for repositories owned by `ignazio-ingenito`.
+Shared Renovate presets for repositories owned by `skunklabs-uk`.
 
 ## Presets
 
