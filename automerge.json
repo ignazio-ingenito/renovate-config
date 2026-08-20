@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>ignazio-ingenito/renovate-config"
+    "github>skunklabs-uk/renovate-config"
   ],
   "packageRules": [
     {
